@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects — Churchill Ung</title>
+    <meta name="description" content="A list of mechanical engineering projects by Churchill Ung." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="/" class="brand">Churchill Ung<span class="dot">.</span></a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/projects.html" class="active">Projects</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="block">
+        <span class="eyebrow">Projects</span>
+        <h1 style="text-align:left; margin-top:0.75rem;">Selected work</h1>
+        <p class="section-sub" style="max-width:620px;">
+          A mix of simulation, design, and prototyping projects. Each one combines tools from across my workflow.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <div class="card-image"><img src="/project-bracket.png" alt="Aerospace bracket" /></div>
+            <div class="card-body">
+              <h3>Aerospace Bracket Optimization</h3>
+              <p>Topology optimization of a titanium mounting bracket. Validated under combined flight loads and printed in PA12 for early fit checks.</p>
+              <div class="tags"><span class="tag">Abaqus</span><span class="tag">SolidWorks</span><span class="tag">3D Printing</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image"><img src="/project-robot.png" alt="Robotic arm" /></div>
+            <div class="card-body">
+              <h3>Robotic Arm Trajectory Controller</h3>
+              <p>Inverse kinematics and trapezoidal motion profiles for a six-axis arm. Prototyped in MATLAB, ported to C++ for the embedded controller.</p>
+              <div class="tags"><span class="tag">MATLAB</span><span class="tag">C++</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image"><img src="/project-drone.png" alt="Drone frame" /></div>
+            <div class="card-body">
+              <h3>Parametric Drone Frame</h3>
+              <p>SolidWorks model driven by a Python script that regenerates the airframe for different motor sizes and payload masses.</p>
+              <div class="tags"><span class="tag">SolidWorks</span><span class="tag">Python</span><span class="tag">3D Printing</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image"><img src="/project-heat.png" alt="Heat exchanger" /></div>
+            <div class="card-body">
+              <h3>Compact Heat Exchanger Study</h3>
+              <p>Steady-state thermal analysis of a finned aluminum exchanger, with a Python sweep over fin pitch and thickness.</p>
+              <div class="tags"><span class="tag">Abaqus</span><span class="tag">Python</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image"><img src="/project-suspension.png" alt="Suspension upright" /></div>
+            <div class="card-body">
+              <h3>FSAE Suspension Uprights</h3>
+              <p>Lightweight uprights designed in SolidWorks, drafted in AutoCAD for the machine shop, and stress-checked under cornering loads.</p>
+              <div class="tags"><span class="tag">SolidWorks</span><span class="tag">AutoCAD</span><span class="tag">Abaqus</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image"><img src="/project-conveyor.png" alt="Sorting conveyor" /></div>
+            <div class="card-body">
+              <h3>Automated Sorting Conveyor</h3>
+              <p>Small-scale conveyor with a vision-driven sorter. Mechanical design in SolidWorks, control logic in C++, vision pipeline in Python.</p>
+              <div class="tags"><span class="tag">SolidWorks</span><span class="tag">C++</span><span class="tag">Python</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>&copy; 2026 Churchill Ung</span>
+        <a href="https://www.churchillung.com">www.churchillung.com</a>
+      </div>
+    </footer>
+  </body>
+</html>
