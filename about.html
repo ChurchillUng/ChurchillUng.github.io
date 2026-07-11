@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About — Design, Simulation, Coding</title>
+    <title>About — Who Am I</title>
     <meta name="description" content="About Churchill Ung Ngie Thong — A mechanical design engineer specializing in CAD design, simulation, and rapid prototyping." />
     <link rel="icon" type="image/jpeg" href="public-img/churchill-astar-award-ceremony.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,9 +84,24 @@
 
     <footer>
       <div class="footer-inner">
-        <span>&copy; 2026 Churchill Ung, Powered by Github</span>
-        <a href="https://www.instagram.com/cr_chill">My Social (Instagram)</a>
+        <span>Churchill Ung Ngie Thong</span>
+        <span>Powered by Github since 2026</span>
       </div>
     </footer>
+    <script>
+    var blocks = document.querySelectorAll('.block');
+    blocks.forEach(function(el) { el.classList.add('animate'); });
+
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    blocks.forEach(function(el) { io.observe(el); });
+  </script>
   </body>
 </html>
