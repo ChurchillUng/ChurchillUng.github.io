@@ -14,7 +14,7 @@
   <body>
     <nav class="nav">
       <div class="nav-inner">
-        <a href="/" class="brand">Design, Simulation, Coding<span class="dot">.</span></a>
+        <a href="/" class="brand">Churchill Ung<span class="dot">.</span></a>
         <ul class="nav-links">
           <li><a href="/" class="active">Home</a></li>
           <li><a href="/about.html">About</a></li>
@@ -41,7 +41,7 @@
     <main class="container">
       <section class="block">
         <h2>What I work with</h2>
-        <p class="section-sub">A focused toolkit covering design, simulation, code, and addictive manufacturing.</p>
+        <p class="section-sub">A focused toolkit covering design, simulation, code, and additive manufacturing.</p>
         <div class="chips">
           <span class="chip">Abaqus</span>
           <span class="chip">AutoCAD</span>
@@ -95,5 +95,20 @@
         <a href="https://www.instagram.com/cr_chill">My Social (Instagram)</a>
       </div>
     </footer>
+    <script>
+    var blocks = document.querySelectorAll('.block');
+    blocks.forEach(function(el) { el.classList.add('animate'); });
+
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    blocks.forEach(function(el) { io.observe(el); });
+  </script>
   </body>
 </html>

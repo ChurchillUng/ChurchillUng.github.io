@@ -476,3 +476,109 @@ footer {
     text-align: center;
   }
 }
+/* =============================================
+   ADDITIONS — paste at the bottom of styles.css
+   ============================================= */
+
+/* --- Sky blue theme tokens --- */
+:root {
+  --sky-bg:     #EBF5FC; /* Very pale blue — for hero or card backgrounds */
+  --sky-accent: #2171B5; /* Confident mid-blue — for links and accents     */
+  --sky-rim:    #BDD7EE; /* Soft blue — for photo borders and dividers      */
+}
+
+/* --- Hero layout: text left, photo right --- */
+.hero-inner {
+  display: flex;           /* Lay children in a row                          */
+  align-items: center;     /* Vertically center text and photo                */
+  gap: 4rem;               /* 64px breathing room between text and photo      */
+}
+
+.hero-text {
+  flex: 1;                 /* Text column takes all remaining space           */
+}
+
+/* --- Profile photo in hero --- */
+.hero-photo img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;      /* Makes the square image a circle                 */
+  object-fit: cover;       /* Fills the circle, cropping edges if needed      */
+  border: 3px solid var(--sky-rim);
+  flex-shrink: 0;          /* Photo never shrinks if the page gets narrow     */
+}
+
+/* --- Social links row in hero --- */
+.social-links {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.social-links a {
+  font-size: 0.875rem;
+  color: var(--sky-accent);
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* --- About page: photo + heading side by side --- */
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.about-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--sky-rim);
+  flex-shrink: 0;
+}
+
+/* --- Footer social links --- */
+.footer-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-links a {
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* --- Scroll animations (progressive enhancement) --- */
+/* .animate is added by JS — if JS is off, elements stay fully visible */
+.block.animate {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.block.animate.visible {
+  opacity: 1;
+  transform: translateY(0);  /* Slides back to natural position */
+}
+
+/* --- Stack hero vertically on narrow screens --- */
+@media (max-width: 640px) {
+  .hero-inner {
+    flex-direction: column-reverse; /* Photo above text on mobile */
+    gap: 2rem;
+  }
+
+  .hero-photo img {
+    width: 110px;
+    height: 110px;
+  }
+}
