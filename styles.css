@@ -487,17 +487,6 @@ footer {
   --sky-rim:    #BDD7EE; /* Soft blue — for photo borders and dividers      */
 }
 
-/* --- Hero layout: text left, photo right --- */
-.hero-inner {
-  display: flex;           /* Lay children in a row                          */
-  align-items: center;     /* Vertically center text and photo                */
-  gap: 4rem;               /* 64px breathing room between text and photo      */
-}
-
-.hero-text {
-  flex: 1;                 /* Text column takes all remaining space           */
-}
-
 /* --- Profile photo in hero --- */
 .hero-photo img {
   width: 160px;
@@ -572,11 +561,6 @@ footer {
 
 /* --- Stack hero vertically on narrow screens --- */
 @media (max-width: 640px) {
-  .hero-inner {
-    flex-direction: column; /* Photo above text on mobile - use column-reverse */
-    gap: 2rem;
-  }
-
   .hero-photo img {
     width: 110px;
     height: 110px;
