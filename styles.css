@@ -573,7 +573,7 @@ footer {
 /* --- Stack hero vertically on narrow screens --- */
 @media (max-width: 640px) {
   .hero-inner {
-    flex-direction: column-reverse; /* Photo above text on mobile */
+    flex-direction: column; /* Photo above text on mobile - use column-reverse */
     gap: 2rem;
   }
 
